@@ -85,10 +85,12 @@ SpecterAPI.getInstance(this, "appkey","您的渠道名称");
 8.超级属性 如果您有一些属性需要每次都要记录您不需要每次track的时候才写进去可以通过如下代码进行设置
 
 ```java
+            //示例代码
             Map<String, Object> superProperties = new LinkedHashMap<>();
             superProperties.put("super1", "1");
             superProperties.put("super2", "2");
             specterAPI.registerSuperPropertiesMap(superProperties);//绑定超级属性
+            //或者使用
 ```
 * 配置之后所有上报的事件中就会有您自定义的字段了
 * ```json
