@@ -73,7 +73,7 @@ SpecterAPI.getInstance(this, "appkey","您的渠道名称");
 ```java
      specterApi.timeEvent("事件名称");//开始记录 填写需要记录的事件名称
      specterApi.track("事件名称");//结束 记录的事件名称将被记录时长
-     specterApi.track("事件名称",JsonObject);
-     specterApi.track("事件名称",Map);
+     specterApi.track("事件名称",JsonObject);//同上
+     specterApi.track("事件名称",Map);//同上
 ```
 
