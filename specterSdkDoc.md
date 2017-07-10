@@ -106,3 +106,6 @@ SpecterAPI.getInstance(this, "appkey","您的渠道名称");
 }
 ```
 * 移除超级属性可以使用如下代码
+```java
+    specterAPI.unregisterSuperProperty("事件名称");
+```
