@@ -82,3 +82,11 @@ SpecterAPI.getInstance(this, "appkey","您的渠道名称");
     -dontwarn com.specter.codeless**
     -keep class com.specter.codeless**{*;}
 ```
+8.超级属性 如果您有一些属性需要每次都要记录您不需要每次track的时候才写进去可以通过如下代码进行设置
+
+```java
+            Map<String, Object> superProperties = new LinkedHashMap<>();
+            superProperties.put("super1", "1");
+            superProperties.put("super2", "2");
+            specterAPI.registerSuperPropertiesMap(superProperties);
+```
