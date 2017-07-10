@@ -68,5 +68,5 @@ SpecterAPI.getInstance(this, "appkey","您的渠道名称");
     SpecterAPI specterApi = SpecterAPI.getInstance(this, "appkey","您的渠道名称");
     specterApi.flush();//立即发送数据
 ```
-
+6.记录事件时间
 
