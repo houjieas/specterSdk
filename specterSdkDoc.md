@@ -68,5 +68,10 @@ SpecterAPI.getInstance(this, "appkey","您的渠道名称");
     SpecterAPI specterApi = SpecterAPI.getInstance(this, "appkey","您的渠道名称");
     specterApi.flush();//立即发送数据
 ```
-6.记录事件时间
+6.记录事件时间 specter 提供了记录时间的功能
+
+```java
+ specterApi.timeEvent("事件名称");
+	   specterApi.track("事件名称");/specterApi.track("事件名称",JsonObject);/specterApi.track("事件名称",Map);
+```
 
