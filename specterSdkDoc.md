@@ -79,6 +79,6 @@ SpecterAPI.getInstance(this, "appkey","您的渠道名称");
 7.混淆配置
 
 ```java
--dontwarn com.specter.codeless**
-	   -keep class com.specter.codeless**{*;}
+    -dontwarn com.specter.codeless**
+    -keep class com.specter.codeless**{*;}
 ```
