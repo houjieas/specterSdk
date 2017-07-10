@@ -91,7 +91,7 @@ SpecterAPI.getInstance(this, "appkey","您的渠道名称");
     superProperties.put("super2", "2");
     specterAPI.registerSuperPropertiesMap(superProperties);//绑定超级属性
     //或者使用
-     specterAPI.registerSuperProperties(JSONObject);
+    specterAPI.registerSuperProperties(JSONObject);
 ```
 * 配置之后所有上报的事件中就会有您自定义的字段了
 * ```json
