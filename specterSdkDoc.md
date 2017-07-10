@@ -90,8 +90,8 @@ SpecterAPI.getInstance(this, "appkey","您的渠道名称");
             superProperties.put("super2", "2");
             specterAPI.registerSuperPropertiesMap(superProperties);//绑定超级属性
 ```
-配置之后所有上报的事件中就会有您自定义的字段了
-```json
+* 配置之后所有上报的事件中就会有您自定义的字段了
+* ```json
 {
     "event": "$page_duration",
     "properties": {
