@@ -76,7 +76,7 @@ SpecterAPI.getInstance(this, "appkey","您的渠道名称");
      specterApi.track("事件名称",JsonObject);//同上
      specterApi.track("事件名称",Map);//同上
 ```
-7.混淆配置
+7.混淆配置 如果您的项目需要混淆请在proguard-project.text（具体文件根据开发者自己配置来确定）文件中添加以下配置
 
 ```java
     -dontwarn com.specter.codeless**
