@@ -76,4 +76,9 @@ SpecterAPI.getInstance(this, "appkey","您的渠道名称");
      specterApi.track("事件名称",JsonObject);//同上
      specterApi.track("事件名称",Map);//同上
 ```
+7.混淆配置
 
+```java
+-dontwarn com.specter.codeless**
+	   -keep class com.specter.codeless**{*;}
+```
