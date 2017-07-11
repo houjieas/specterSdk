@@ -26,7 +26,7 @@
 * 3.如果您不希望所有使用此应用的都具备可视化埋点能力,开发者可在Manifest.xml加入以下代码
 
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
+            <?xml version="1.0" encoding="UTF-8"?>
             //请注意true代表关闭 默认是false 代表不关闭
             <meta-data
             android:name="com.specter.codeless.SPConfig.DisableGestureBindingUI"
