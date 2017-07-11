@@ -1,4 +1,5 @@
 # Specter SDK(V1.0)使用手册
+##申请appkey
 
 ## 配置SDK
 
@@ -73,8 +74,13 @@ SpecterAPI.getInstance(this, "appkey","您的渠道名称");
 ```java
      specterApi.timeEvent("事件名称");//开始记录 填写需要记录的事件名称
      specterApi.track("事件名称");//结束 记录的事件名称将被记录时长
-     specterApi.track("事件名称",JsonObject);//同上
-     specterApi.track("事件名称",Map);//同上
+     specterApi.track("事件名称",JSONObject);//同上
+     specterApi.track("事件名称",Map<String,Object>);//同上
+```
+* 完整的事件上报字段
+
+```json
+ 
 ```
 7.混淆配置 如果您的项目需要混淆请在proguard-project.text（具体文件根据开发者自己配置来确定）文件中添加以下配置
 
@@ -92,6 +98,10 @@ SpecterAPI.getInstance(this, "appkey","您的渠道名称");
     specterAPI.registerSuperPropertiesMap(superProperties);//绑定超级属性
     //或者使用
     specterAPI.registerSuperProperties(JSONObject);
+    //带Once与不带Once的区别在于 Once不会替换原有的属性 如果已经存在属性就不会替换
+    specterAPI.registerSuperPropertiesOnce(JSONObject);
+    specterAPI.registerSuperPropertiesOnceMap(Map<String,Object>);
+
 ```
 * 配置之后所有上报的事件中就会有您自定义的字段了
 * ```json
@@ -108,4 +118,6 @@ SpecterAPI.getInstance(this, "appkey","您的渠道名称");
 * 移除超级属性可以使用如下代码
 ```java
     specterAPI.unregisterSuperProperty("事件名称");
+    //清除所有超级属性
+    specterAPI.clearSuperProperties();
 ```
