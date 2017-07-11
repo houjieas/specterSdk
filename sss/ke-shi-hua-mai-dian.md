@@ -31,6 +31,7 @@
             <meta-data
             android:name="com.specter.codeless.SPConfig.DisableGestureBindingUI"
             android:value="true" />
+            
             //关闭模拟器自动连接
             <meta-data
             android:name="com.specter.codeless.SPConfig.DisableEmulatorBindingUI"
