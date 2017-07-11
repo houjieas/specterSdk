@@ -219,7 +219,7 @@ SpecterAPI.getInstance(this, "appkey","您的渠道名称");
     specterAPI.clearSuperProperties();
 ```
 
-9.查看log
+9.查看log信息，很多时候开发者需要知道自己定义的事件或者其他信息有没有被成功的记录，我们也提供了一些日志信息供参考，希望可以帮到开发者
 	   * 使用SPlog.setLevel(SPlog.常量);即可在logcat中查看log
 	   * 常用的Regex	
 	
