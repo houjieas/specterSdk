@@ -1,6 +1,4 @@
 # Specter SDK(V1.0)使用手册
-## 申请appkey
-* 成功申请appKey后，创建应用
 
 ## 配置SDK
 
