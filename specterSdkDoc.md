@@ -63,20 +63,6 @@ SpecterAPI.getInstance(this, "appkey","您的渠道名称");
     specterApi.track(Map<String,Object>);//传map 最终调用specterApi.track(JSONObject)
     specterApi.track(JSONObject);//传json串
 ```
-5.数据发送机制，目前只要有数据缓存在本地1分钟后将会自动发送数据，specter也提供立即发送数据的功能
-
-```java
-    SpecterAPI specterApi = SpecterAPI.getInstance(this, "appkey","您的渠道名称");
-    specterApi.flush();//立即发送数据
-```
-6.记录事件时间 specter 提供了记录时间的功能。
-
-```java
-     specterApi.timeEvent("事件名称");//开始记录 填写需要记录的事件名称
-     specterApi.track("事件名称");//结束 记录的事件名称将被记录时长
-     specterApi.track("事件名称",JSONObject);//同上
-     specterApi.track("事件名称",Map<String,Object>);//同上
-```
 * 完整的事件上报字段，请注意带有'$'的字段为默认属性，请不要在设置自定义属性的时候使用带有'$'开始的属性名称
 
 ```json
@@ -178,6 +164,22 @@ SpecterAPI.getInstance(this, "appkey","您的渠道名称");
     }
 }
 ```
+
+5.数据发送机制，目前只要有数据缓存在本地1分钟后将会自动发送数据，specter也提供立即发送数据的功能
+
+```java
+    SpecterAPI specterApi = SpecterAPI.getInstance(this, "appkey","您的渠道名称");
+    specterApi.flush();//立即发送数据
+```
+6.记录事件时间 specter 提供了记录时间的功能。
+
+```java
+     specterApi.timeEvent("事件名称");//开始记录 填写需要记录的事件名称
+     specterApi.track("事件名称");//结束 记录的事件名称将被记录时长
+     specterApi.track("事件名称",JSONObject);//同上
+     specterApi.track("事件名称",Map<String,Object>);//同上
+```
+
 7.混淆配置 如果您的项目需要混淆请在proguard-project.text（具体文件根据开发者自己配置来确定）文件中添加以下配置
 
 ```json
