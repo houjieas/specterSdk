@@ -9,13 +9,13 @@
 
 4.选择新增应用
 
-![](新增应用.png)
+![](xinzengyingyong.png)
 
 5.选择android应用
-![](选择android.png)
+![](xuanzeandroid.png)
 
 6.appkey创建完毕后下载android sdk
 
-![](创建appkey下载sdk.png)
+![](create_appkey_download_sdk.png)
 
 
