@@ -81,7 +81,7 @@ SpecterAPI.getInstance(this, "appkey","您的渠道名称");
 
 ```json
  {
-    "event": "$android_event_click",
+    "event": "事件名称",
     "properties": {
         "$sp_lib": "android",
         "$os": "android",
@@ -102,7 +102,7 @@ SpecterAPI.getInstance(this, "appkey","您的渠道名称");
         "$bluetooth_enabled": true,
         "$bluetooth_version": "ble",
         "$fpid": "",
-        "$channel": "android理财专用",
+        "$channel": "渠道",
         "$capacity": "24.61 GB",
         "$memory": "2.73 GB",
         "$cpu_count": 8,
@@ -133,7 +133,7 @@ SpecterAPI.getInstance(this, "appkey","您的渠道名称");
         "$time": 1499741554,
         "$distinct_id": "测试",
         "$session_id": "1499741554438",
-        "$el_text": "精选",
+        "$el_text": "精选",//触发事件的文本或者内部所有子控件的文本
         "$from_binding": true,
         "$position_x": 45,
         "$position_y": 1683,
