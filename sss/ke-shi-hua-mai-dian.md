@@ -16,6 +16,23 @@
 
 ![](摇一摇连接.png)
 
+5.开始可视化埋点，可视化埋点部署成功后，其他用户的接受服务器配置信息之后，将会自动将控件绑定事件
+
+![](设置事件.png)
+
+6.可视化埋点需要注意的事项
+* 1.默认情况下所有使用同一appkey的应用都可以通过摇一摇进行事件设置
+* 2.模拟器默认情况下会自动连接无须摇一摇
+* 3.如果您不希望所有使用此应用的都具备可视化埋点能力开发者可在Manifest.xml加入以下代码
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<meta-data
+            android:name="com.specter.codeless.SPConfig.DisableGestureBindingUI"
+            android:value=true />
+```
+
+
 
 
 
