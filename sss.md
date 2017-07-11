@@ -219,3 +219,16 @@ SpecterAPI.getInstance(this, "appkey","您的渠道名称");
     //清除所有超级属性
     specterAPI.clearSuperProperties();
 ```
+9.查看log
+	   使用SPlog.setLevel(SPlog.常量);即可在logcat中查看log
+	   常用的Regex	
+	
+```java
+    SpecterAPI.Messages 查看所有用track相关的log
+    SpecterAPI.EditorCnctn查看websocket相关log
+    SpecterAPI.ViewCrawler查看控件绑定相关log
+    SpecterAPI.DChecker查看部署的事件信息log
+    如需查看更多log，请直接使用SpecterAPI即可。
+
+```	
+
