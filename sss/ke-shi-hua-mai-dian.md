@@ -27,9 +27,15 @@
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<meta-data
+//关闭摇一摇功能 请注意true代表关闭 默认是false 代表不关闭
+            <meta-data
             android:name="com.specter.codeless.SPConfig.DisableGestureBindingUI"
-            android:value=true />
+            android:value="true" />
+            
+            <meta-data
+            android:name="com.specter.codeless.SPConfig.DisableEmulatorBindingUI"
+            android:value="true" />
+
 ```
 
 
