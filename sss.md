@@ -1,5 +1,5 @@
 # Specter SDK(V1.0)使用手册
-##申请appkey
+## 申请appkey
 
 ## 配置SDK
 
@@ -219,9 +219,10 @@ SpecterAPI.getInstance(this, "appkey","您的渠道名称");
     //清除所有超级属性
     specterAPI.clearSuperProperties();
 ```
+
 9.查看log
-	   使用SPlog.setLevel(SPlog.常量);即可在logcat中查看log
-	   常用的Regex	
+	   * 使用SPlog.setLevel(SPlog.常量);即可在logcat中查看log
+	   * 常用的Regex	
 	
 ```java
     SpecterAPI.Messages 查看所有用track相关的log
