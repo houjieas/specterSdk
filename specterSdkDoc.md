@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 SpecterAPI.getInstance(this, "appkey","您的渠道名称");
 ```
 
-4.自定义事件(手动埋点)示例代码 提供了3个方法
+4.自定义事件(手动埋点)示例代码，提供了3个方法。
 
 ```java
     SpecterAPI specterApi = SpecterAPI.getInstance(this, "appkey","您的渠道名称");
@@ -63,13 +63,13 @@ SpecterAPI.getInstance(this, "appkey","您的渠道名称");
     specterApi.track(Map<String,Object>);//传map 最终调用specterApi.track(JSONObject)
     specterApi.track(JSONObject);//传json串
 ```
-5.数据发送机制 目前只要有数据缓存在本地1分钟后将会自动发送数据，specter也提供立即发送数据的功能
+5.数据发送机制，目前只要有数据缓存在本地1分钟后将会自动发送数据，specter也提供立即发送数据的功能
 
 ```java
     SpecterAPI specterApi = SpecterAPI.getInstance(this, "appkey","您的渠道名称");
     specterApi.flush();//立即发送数据
 ```
-6.记录事件时间 specter 提供了记录时间的功能
+6.记录事件时间 specter 提供了记录时间的功能。
 
 ```java
      specterApi.timeEvent("事件名称");//开始记录 填写需要记录的事件名称
@@ -77,10 +77,106 @@ SpecterAPI.getInstance(this, "appkey","您的渠道名称");
      specterApi.track("事件名称",JSONObject);//同上
      specterApi.track("事件名称",Map<String,Object>);//同上
 ```
-* 完整的事件上报字段
+* 完整的事件上报字段，请注意带有'$'的字段为默认属性，请不要在设置自定义属性的时候使用带有'$'开始的属性名称
 
 ```json
- 
+ {
+    "event": "$android_event_click",
+    "properties": {
+        "$sp_lib": "android",
+        "$os": "android",
+        "$os_version": "6.0",
+        "$manufacturer": "HUAWEI",
+        "$brand": "HUAWEI",
+        "$model": "HUAWEI NXT-AL10",
+        "$screen_dpi": 440,
+        "$screen_height": 1920,
+        "$screen_width": 1080,
+        "$app_version": "5.1.0",
+        "$app_version_string": "5.1.0",
+        "$app_release": 21510,
+        "$app_build_number": 21510,
+        "$has_nfc": true,
+        "$has_telephone": true,
+        "$wifi": true,
+        "$bluetooth_enabled": true,
+        "$bluetooth_version": "ble",
+        "$fpid": "",
+        "$channel": "android理财专用",
+        "$capacity": "24.61 GB",
+        "$memory": "2.73 GB",
+        "$cpu_count": 8,
+        "$cpu_serial": "",
+        "$imei": "861918038151750",
+        "$imsi": "null",
+        "$cpu_speed": "480.0 - 1805.0MHZ",
+        "$cpu_abi": "arm64-v8a,armeabi-v7a,armeabi",
+        "$cpu_type": "Hisilicon Kirin 950",
+        "$network_type": "WiFi",
+        "$language": "zh",
+        "$operator": "null",
+        "$mac": "dc:d9:16:af:d0:04",
+        "$dns": "192.168.0.43",
+        "$ip": "10.15.235.95",
+        "$proxy_ip": "null",
+        "$wifi_name": "niwodai",
+        "$platform": "android",
+        "$event_time": 1499741554674,
+        "$sdk_version": "1.0.0",
+        "$latitude": 31.220296,
+        "$longitude": 121.530789,
+        "$current_url": "com.chinaideal.bkclient.tabmain.homepage.HomeMainAc",
+        "$token": "f4dab211bed00312e5a7be6193c76a7a",
+        "$appkey": "f4dab211bed00312e5a7be6193c76a7a",
+        "super1": "1",//用户自定义的属性
+        "super2": "2",
+        "$time": 1499741554,
+        "$distinct_id": "测试",
+        "$session_id": "1499741554438",
+        "$el_text": "精选",
+        "$from_binding": true,
+        "$position_x": 45,
+        "$position_y": 1683,
+        "$scroll_width": 330,
+        "$scroll_height": 138,
+        "$event_type": "click",
+        "$path": [//触发事件的view的路径
+            {
+                "prefix": "shortest",
+                "index": 0,
+                "id": 16908290
+            },
+            {
+                "view_class": "com.bricks.widgets.base.BaseContextView",
+                "index": 0
+            },
+            {
+                "sp_id_name": "dl_filter",
+                "index": 0
+            },
+            {
+                "view_class": "android.widget.LinearLayout",
+                "index": 0
+            },
+            {
+                "sp_id_name": "bottom_navigation_bar",
+                "index": 0
+            },
+            {
+                "sp_id_name": "bottom_navigation_bar_container",
+                "index": 0
+            },
+            {
+                "sp_id_name": "bottom_navigation_bar_item_container",
+                "index": 0
+            },
+            {
+                "view_class": "com.nwd.bottomnavigationbar.NwdShiftingBottomNavigationTab",
+                "index": 0
+            }
+        ]
+    }
+}
 ```
 7.混淆配置 如果您的项目需要混淆请在proguard-project.text（具体文件根据开发者自己配置来确定）文件中添加以下配置
 
