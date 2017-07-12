@@ -212,18 +212,22 @@ SpecterAPI.getInstance(this, "appkey","您的渠道名称");
     }
 }
 ```
-9.替换默认匿名id,默认情况系统会自动生成一个id，如果需要特殊指定可以使用以下方法用来区分用户
-
-```java
-  specterAPI.identify("自定义匿名id");
-```
-
 * 移除超级属性可以使用如下代码
 ```java
     specterAPI.unregisterSuperProperty("事件名称");
     //清除所有超级属性
     specterAPI.clearSuperProperties();
 ```
+
+
+
+9.替换默认匿名id,默认情况系统会自动生成一个id，如果需要特殊指定可以使用以下方法用来区分用户
+
+```java
+  specterAPI.identify("自定义匿名id");
+```
+
+
 
 9.查看log信息，很多时候开发者需要知道自己定义的事件或者其他信息有没有被成功的记录，我们也提供了一些日志信息供参考，希望可以帮到开发者
 	   * 使用SPlog.setLevel(SPlog.常量);即可在logcat中查看log
