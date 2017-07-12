@@ -212,6 +212,12 @@ SpecterAPI.getInstance(this, "appkey","您的渠道名称");
     }
 }
 ```
+9.替换默认匿名id,默认情况系统会自动生成一个id，如果需要特殊指定可以使用以下方法用来区分用户
+
+```java
+  specterAPI.identify("自定义匿名id");
+```
+
 * 移除超级属性可以使用如下代码
 ```java
     specterAPI.unregisterSuperProperty("事件名称");
