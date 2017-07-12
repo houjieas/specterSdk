@@ -4,9 +4,9 @@
 
  1.引入SDK包：specter.jar
 
-* ![](/assets/图片1.png)
+* ![](/assets/pic1.png)
 
-* ![](/assets/图片2.png)
+* ![](/assets/pic2.png)
 * 请在入口activity添加以下代码
 
 ```java

@@ -1,20 +1,20 @@
 # 用户管理
 * 管理自己的app
 
-![](用户管理.png)
+![](yonghuguanli.png)
 
 ## 授权应用
 
 ### 点击编辑用户
 
-![](编辑用户.png)
+![](bianjiyonghu.png)
 
 ### 选择需要授权的应用
 
-![](应用授权.png)
+![](yingyongshouquan.png)
 
 * 授权完成之后即可选择应用进行数据查询
 
-![](选择需要查询的应用.png)
+![](xuanzexuyaochaxundeyingyong.png)
 
 
