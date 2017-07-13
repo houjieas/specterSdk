@@ -21,6 +21,7 @@
 ![](shezhishijian.png)
 
 6.可视化埋点需要注意的事项
+
 * 1.默认情况下所有使用同一appkey的应用都可以通过摇一摇进行事件设置
 * 2.模拟器默认情况下会自动连接无须摇一摇
 * 3.如果您不希望所有使用此应用的都具备可视化埋点能力,开发者可在Manifest.xml加入以下代码
@@ -31,17 +32,12 @@
             <meta-data
             android:name="com.specter.codeless.SPConfig.DisableGestureBindingUI"
             android:value="true" />
-            
+
             //关闭模拟器自动连接
             <meta-data
             android:name="com.specter.codeless.SPConfig.DisableEmulatorBindingUI"
             android:value="true" />
-
 ```
-
-
-
-
 
 
 
