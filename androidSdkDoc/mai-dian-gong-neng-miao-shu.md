@@ -125,9 +125,12 @@ path根据4个属性来确定（index,tag,id,contentDescription）
 现在我们看这两控件的path是不是就不一样了呢？为了使用起来更简便，specter提供一些简单的方法帮助开发者来解决这些重用视图的问题---SpecterViewTrackHelp类
 ```java
 SpecterViewTrackHelp.registTag(View view, String tag);
-//示例
+//示例 这样就会看到上面的效果 ，这样以来至少我们可以将两个不同的listView做了区分，然而事情并没有完
 SpecterViewTrackHelp.registTag(DropDownListView, "婚姻状况");
 SpecterViewTrackHelp.registTag(DropDownListView, "养老保险");
+
+上面的示例我们看到"android:text1"，才是我们真正点击到的控件，然后我们发现它并有index，因为它的父容器是
+adapterView，但是我们很多时候列表长度并不是很长，而且每个item都有其单独的意义，所以我们需要单独设置事件
 
 ```
 
