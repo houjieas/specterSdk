@@ -7,7 +7,7 @@
 * ![](/assets/pic1.png)
 
 * ![](/assets/pic2.png)
-* 请在入口activity添加以下代码
+* 请在入口activity或者application添加以下代码
 
 ```java
 public class MainActivity extends AppCompatActivity {
@@ -20,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
         	SpecterAPI.getInstance(this, "你的appkey");
                 //或者
             SpecterAPI.getInstance(this, "你的appkey"，"渠道编号");
+            //也可以直接使用这个方法打开log
+            SpecterAPI.getInstance(this, "你的appkey"，"渠道编号",boolean openDebugLog);
 
     	}
 }
