@@ -46,3 +46,9 @@
 }
 ```
 path根据4个属性来确定（index,tag,id,contentDescription）
+如果path一直圈选则都会选中
+# 视图复用（重点）
+* 场景1.同一个activity用一份xml但是页面逻辑却不同，通常手动埋点，会通过逻辑进行判断。
+* 场景2.list控件AdapterView RecylerView这些视图都是复用的，itmeView几乎不可能通过在父容器的index来精确定位其位置，所以此类view的index全部取消
+* 场景3.一个页面通过某些逻辑，动态加载了一个视图，这个视图都是同一个份XML或者是一个自定义控件，这些加载进来的视图唯一的区别仅仅只是展示的数据不同。
+
