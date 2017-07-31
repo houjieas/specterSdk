@@ -55,10 +55,11 @@ path根据4个属性来确定（index,tag,id,contentDescription）
 ![](device-2017-07-31-113816.png)
 ![](device-2017-07-31-113833.png)
 
-如图所示，我们看到了两个弹框，这两个弹框都是一个普通的window，
+如图所示，我们看到了两个弹框，这两个弹框都是一个普通的window，列表上每一个item的path都是一样的
+![](7a2808a9-ad59-4df1-bd2f-19636b37f8ff.png)
 
 ```json
-"path": [
+                "path": [
                                 {
                                     "prefix": "shortest",
                                     "index": 0
@@ -70,11 +71,9 @@ path根据4个属性来确定（index,tag,id,contentDescription）
                                 {
                                     "view_class": "android.widget.ListPopupWindow.DropDownListView",
                                     "index": 0,
-                                    "contentDescription": "marriage"
                                 },
                                 {
                                     "sp_id_name": "android:text1",
-                                    "contentDescription": "specterAdapterViewPosition_1"
                                 }
                             ]
 ```
