@@ -182,7 +182,7 @@ SpecterViewTrackHelp.registUniqueIndexAndTag(DropDownListView,"养老保险")；
 其本质也是一样的
 
 ```
-* 以上只是举了一个例子，我们开发中还会有各种不同场景出现视图复用，比如之前提高的第一种情况，activity，我们就可以对contentView注册tag
+* 以上只是举了一个例子，我们开发中还会有各种不同场景出现视图复用，比如之前提到的第一种情况，activity，我们就可以对contentView注册tag
 
 
 
