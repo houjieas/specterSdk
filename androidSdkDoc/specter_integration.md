@@ -231,6 +231,18 @@ SpecterAPI.getInstance(this, "appkey","您的渠道名称");
 ```java
   specterAPI.identify("自定义匿名id");
 ```
+```json
+{
+  "event": "$page_duration",
+  "properties": {
+      ......
+      "super1": "1",
+      "super2": "2",
+      "$distinct_id":"自定义匿名id",
+      ......
+  }
+}
+```
 
 
 
