@@ -152,6 +152,31 @@ SpecterViewTrackHelp.registUniqueIndex(DropDownListView);
     "contentDescription":"specterAdapterViewPosition_1"
     }
 ]
+我们看到"android:text1"多了一个contentDescription属性，specterAdapterViewPosition+position是默认给予convertView设置的描述，如果convertView.getContentDescription()有值，优先取开发者自定定义的。
+
+这还不算完，我们看到做到区分每个容器和每个列表itemView需要两步，这显然看上去有点麻烦，所以也提供了一句代码搞定的方法。
+SpecterViewTrackHelp.registUniqueIndexAndTag(DropDownListView,"养老保险")； 
+这样每个DropDownListView也可以区分，item也可以区分
+//完整示例
+"path": [
+    {
+        "prefix": "shortest",
+        "index": 0
+    },
+    {
+        "view_class": "android.widget.PopupWindow.PopupBackgroundView",
+        "index": 0
+    },
+    {
+        "view_class": "android.widget.ListPopupWindow.DropDownListView",
+        "index": 0，
+        "contentDescription":"养老保险"
+    },
+    {
+        "sp_id_name": "android:text1",
+        "contentDescription":"specterAdapterViewPosition_1"
+    }
+]
 
 ```
 
