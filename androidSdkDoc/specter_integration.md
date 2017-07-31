@@ -238,7 +238,7 @@ SpecterAPI.getInstance(this, "appkey","您的渠道名称");
       ......
       "super1": "1",
       "super2": "2",
-      "$distinct_id":"自定义匿名id",
+      "$distinct_id":"自定义匿名id",//identify设置之后会将值存入$distinct_id发送到后台
       ......
   }
 }
