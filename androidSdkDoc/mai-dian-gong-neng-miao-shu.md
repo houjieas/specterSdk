@@ -132,6 +132,27 @@ SpecterViewTrackHelp.registTag(DropDownListView, "养老保险");
 上面的示例我们看到"android:text1"，才是我们真正点击到的控件，然后我们发现它并有index，因为它的父容器是
 adapterView，但是我们很多时候列表长度并不是很长，而且每个item都有其单独的意义，所以我们需要单独设置事件
 
+SpecterViewTrackHelp.registUniqueIndex(DropDownListView);
+
+"path": [
+    {
+    "prefix": "shortest",
+    "index": 0
+    },
+    {
+    "view_class": "android.widget.PopupWindow.PopupBackgroundView",
+    "index": 0
+    },
+    {
+    "view_class": "android.widget.ListPopupWindow.DropDownListView",
+    "index": 0
+    },
+    {
+    "sp_id_name": "android:text1",
+    "contentDescription":"specterAdapterViewPosition_1"
+    }
+]
+
 ```
 
 
