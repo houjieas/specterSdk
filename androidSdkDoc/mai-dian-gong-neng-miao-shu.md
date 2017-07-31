@@ -136,20 +136,20 @@ SpecterViewTrackHelp.registUniqueIndex(DropDownListView);
 
 "path": [
     {
-    "prefix": "shortest",
-    "index": 0
+        "prefix": "shortest",
+        "index": 0
     },
     {
-    "view_class": "android.widget.PopupWindow.PopupBackgroundView",
-    "index": 0
+        "view_class": "android.widget.PopupWindow.PopupBackgroundView",
+        "index": 0
     },
     {
-    "view_class": "android.widget.ListPopupWindow.DropDownListView",
-    "index": 0
+        "view_class": "android.widget.ListPopupWindow.DropDownListView",
+        "index": 0
     },
     {
-    "sp_id_name": "android:text1",
-    "contentDescription":"specterAdapterViewPosition_1"
+        "sp_id_name": "android:text1",
+        "contentDescription":"specterAdapterViewPosition_1"
     }
 ]
 我们看到"android:text1"多了一个contentDescription属性，specterAdapterViewPosition+position是默认给予convertView设置的描述，如果convertView.getContentDescription()有值，优先取开发者自定定义的。
@@ -170,16 +170,17 @@ SpecterViewTrackHelp.registUniqueIndexAndTag(DropDownListView,"养老保险")；
     {
         "view_class": "android.widget.ListPopupWindow.DropDownListView",
         "index": 0，
-        "contentDescription":"养老保险"
+        "contentDescription":"养老保险"//区分了容器
     },
     {
         "sp_id_name": "android:text1",
-        "contentDescription":"specterAdapterViewPosition_1"
+        "contentDescription":"specterAdapterViewPosition_1"//列表项的view也有自己单的描述
     }
 ]
+当然对于adapterView以及recyclerView如果开发者不喜欢specter提供的contentDescription，可以直接在adapter的getView（adapterView）或者onBindViewHolder（recyclerView）使用view.contentDescription("");其本质也是一样的
 
 ```
-
+* 以上只是举了一个例子，我们开发中还会有各种不同场景出现视图复用，比如之前提高的第一种情况，activity，我们就可以对contentView注册tag
 
 
 
