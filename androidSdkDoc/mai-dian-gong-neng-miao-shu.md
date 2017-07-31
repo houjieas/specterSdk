@@ -177,7 +177,9 @@ SpecterViewTrackHelp.registUniqueIndexAndTag(DropDownListView,"养老保险")；
         "contentDescription":"specterAdapterViewPosition_1"//列表项的view也有自己单的描述
     }
 ]
-当然对于adapterView以及recyclerView如果开发者不喜欢specter提供的contentDescription，可以直接在adapter的getView（adapterView）或者onBindViewHolder（recyclerView）使用view.contentDescription("");其本质也是一样的
+当然对于adapterView以及recyclerView如果开发者不喜欢specter提供的contentDescription，
+可以直接在adapter的getView（adapterView）或者onBindViewHolder（recyclerView）使用view.contentDescription("");
+其本质也是一样的
 
 ```
 * 以上只是举了一个例子，我们开发中还会有各种不同场景出现视图复用，比如之前提高的第一种情况，activity，我们就可以对contentView注册tag
