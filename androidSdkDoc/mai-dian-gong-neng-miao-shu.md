@@ -50,5 +50,45 @@ path根据4个属性来确定（index,tag,id,contentDescription）
 # 视图复用（重点）
 * 场景1.同一个activity用一份xml但是页面逻辑却不同，通常手动埋点，会通过逻辑进行判断。
 * 场景2.list控件AdapterView RecylerView这些视图都是复用的，itmeView几乎不可能通过在父容器的index来精确定位其位置，所以此类view的index全部取消
-* 场景3.一个页面通过某些逻辑，动态加载了一个视图，这个视图都是同一个份XML或者是一个自定义控件，这些加载进来的视图唯一的区别仅仅只是展示的数据不同。
+* 场景3.一个页面通过某些逻辑，动态加载了一个视图，这个视图都是同一个份XML或者是一个自定义控件，比如一个页面有多个可点击的视图，点击一个弹出一个新的ListViewDialog，而这些数据需要分开统计，但是这些加载进来的视图唯一的区别仅仅只是展示的数据不同，所以我们必须手动进行区分，因为specter只知道如何去定位一个view的path并不能知道业务逻辑，需要开发者自己来做区分。
+![](device-2017-07-31-113339.png)
+![](device-2017-07-31-113816.png)
+![](device-2017-07-31-113833.png)
+
+如图所示，我们看到了两个弹框，这两个弹框都是一个普通的window，
+
+```json
+"path": [
+                                {
+                                    "prefix": "shortest",
+                                    "index": 0
+                                },
+                                {
+                                    "view_class": "android.widget.PopupWindow.PopupBackgroundView",
+                                    "index": 0
+                                },
+                                {
+                                    "view_class": "android.widget.ListPopupWindow.DropDownListView",
+                                    "index": 0,
+                                    "contentDescription": "marriage"
+                                },
+                                {
+                                    "sp_id_name": "android:text1",
+                                    "contentDescription": "specterAdapterViewPosition_1"
+                                }
+                            ]
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
 
