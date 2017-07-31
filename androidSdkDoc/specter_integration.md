@@ -22,6 +22,9 @@ public class MainActivity extends AppCompatActivity {
             SpecterAPI.getInstance(this, "你的appkey"，"渠道编号");
             //也可以直接使用这个方法打开log
             SpecterAPI.getInstance(this, "你的appkey"，"渠道编号",boolean openDebugLog);
+            //disableBindingUI 选择true的情况下 摇一摇功能将被禁用
+            SpecterAPI.getInstance(this, "你的appkey"，"渠道编号",boolean openDebugLog，boolean  disableBindingUI);
+
 
     	}
 }
