@@ -7,7 +7,7 @@
 * ![](/assets/pic1.png)
 
 * ![](/assets/pic2.png)
-* 请在入口activity或者application添加以下代码
+> 请在入口activity或者application添加以下代码
 
 ```java
 public class MainActivity extends AppCompatActivity {
@@ -46,8 +46,8 @@ public class MainActivity extends AppCompatActivity {
 	<uses-permission android:name="android.permission.BLUETOOTH" />
 ```
 3.配置渠道
-* 渠道配置提供了两种方 代码配置 和 Manifest.xml配置
-* Manifest配置如下
+> 渠道配置提供了两种方 代码配置 和 Manifest.xml配置
+> Manifest配置如下
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <meta-data
@@ -67,7 +67,7 @@ SpecterAPI.getInstance(this, "appkey","您的渠道名称");
     specterApi.track(Map<String,Object>);//传map 最终调用specterApi.track(JSONObject)
     specterApi.track(JSONObject);//传json串
 ```
-* 完整的事件上报字段，请注意带有'$'的字段为默认属性，请不要在设置自定义属性的时候使用带有'$'开始的属性名称
+> 完整的事件上报字段，请注意带有'$'的字段为默认属性，请不要在设置自定义属性的时候使用带有'$'开始的属性名称
 
 ```json
  {
@@ -205,8 +205,8 @@ SpecterAPI.getInstance(this, "appkey","您的渠道名称");
     specterAPI.registerSuperPropertiesOnceMap(Map<String,Object>);
 
 ```
-* 配置之后所有上报的事件中就会有您自定义的字段了
-* ```json
+> 配置之后所有上报的事件中就会有您自定义的字段了
+> ```json
 {
     "event": "$page_duration",
     "properties": {
@@ -217,7 +217,7 @@ SpecterAPI.getInstance(this, "appkey","您的渠道名称");
     }
 }
 ```
-* 移除超级属性可以使用如下代码
+> 移除超级属性可以使用如下代码
 ```java
     specterAPI.unregisterSuperProperty("事件名称");
     //清除所有超级属性
