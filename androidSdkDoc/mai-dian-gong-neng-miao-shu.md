@@ -186,7 +186,7 @@ SpecterViewTrackHelp.registUniqueIndexAndTag(DropDownListView,"养老保险")；
     }
 ]
 当然对于adapterView以及recyclerView如果开发者不喜欢specter提供的contentDescription，
-可以直接在adapter的getView（adapterView）或者onBindViewHolder（recyclerView）使用view.contentDescription("");
+可以直接在adapter的getView:adapterView或者onBindViewHolder--recyclerView使用view.contentDescription("");
 其本质也是一样的
 
 ```
